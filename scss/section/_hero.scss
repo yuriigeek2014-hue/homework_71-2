@@ -1,0 +1,149 @@
+
+.hero {
+    min-height: 700px;
+    padding: 100px 0;
+    background-color: #22262e;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero__content {
+    max-width: 600px;
+}
+
+.hero__subtitle {
+    color: #b6ff00;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero__title {
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.hero__title span {
+    color: #b6ff00;
+}
+
+.hero__description {
+    color: #a7adb8;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 15px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button__primary {
+    background-color: #b6ff00;
+    color: #080a0f;
+    border: 2px solid #b6ff00;
+}
+
+.button__primary:hover {
+    background-color: #d1ff66;
+    transform: translateY(-3px);
+}
+
+.button__secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #333943;
+}
+
+.button__secondary:hover {
+    border-color: #b6ff00;
+    color: #b6ff00;
+    transition-duration: 500ms;
+}
+
+.hero__cards {
+    position: relative;
+    min-height: 500px;
+}
+
+.player__card {
+    position: absolute;
+    width: 270px;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.player__card:first-child {
+    right: 10px;
+    top: 150px;
+    transform: rotate(-10deg);
+}
+
+.player__card:last-child {
+    transform: rotate(10deg);
+    z-index: 2;
+}
+
+.player-card__image {
+    width: 100%;
+}
+
+.section-title {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+@media (max-width: 1175px) {
+    .player__card:last-child {
+        display: none;
+    }
+
+    .player__card:first-child {
+        transform: rotate(0deg);
+    }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 70px 0;
+  }
+
+  .hero .container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__cards {
+    display: none;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__title {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+}
